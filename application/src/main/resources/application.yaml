@@ -1,0 +1,19 @@
+spring:
+  main:
+    banner-mode: 'off'
+  application:
+    name: "Flight Booking"
+  output:
+    ansi:
+      enabled: DETECT
+
+server:
+  port: 8080
+
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hussard.flight.booking.infrastructure: INFO
+    org.hussard.flight.booking.application: INFO
+    org.hussard.flight.booking.business: INFO
