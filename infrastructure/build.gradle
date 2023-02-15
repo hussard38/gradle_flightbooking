@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'org.hussard.flight.booking.infrastructure'
+version 'unspecified'
+
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    junit5 = '5.8.1'
+    assertj = '3.23.1'
+    commons_lang3='3.12.0'
+    commons_collections4='4.4'
+    slf4jLog4='2.0.5'
+    fasterxmlJackson = '2.14.0'
+}
+dependencies {
+    implementation project(':business')
+    //
+    implementation "org.slf4j:slf4j-log4j12:${slf4jLog4}"
+    implementation "org.slf4j:slf4j-api:${slf4jLog4}"
+
+    implementation "org.assertj:assertj-core:${assertj}"
+    implementation "org.apache.commons:commons-lang3:${commons_lang3}"
+    implementation "org.apache.commons:commons-collections4:${commons_collections4}"
+
+    implementation "com.fasterxml.jackson.core:jackson-core:${fasterxmlJackson}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${fasterxmlJackson}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${fasterxmlJackson}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${fasterxmlJackson}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junit5}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junit5}"
+}
+
+test {
+    useJUnitPlatform()
+}
