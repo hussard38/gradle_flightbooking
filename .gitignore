@@ -79,7 +79,7 @@ cmake-build-*/
 
 # IntelliJ
 out/
-
+!org/hussard/flight/booking/business/adapter/out
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
