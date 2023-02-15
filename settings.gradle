@@ -16,3 +16,7 @@ include 'services:webservice'
 */
 
 rootProject.name = 'gradle_flightbooking'
+include 'application'
+include 'business'
+include 'infrastructure'
+
