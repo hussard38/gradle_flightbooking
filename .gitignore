@@ -127,3 +127,13 @@ gradle-app.setting
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
+/.idea/compiler.xml
+/application/build.gradle
+/business/build.gradle
+/infrastructure/build.gradle
+/.idea/git_toolbox_prj.xml
+/.idea/intellij-javadocs-4.0.1.xml
+/.idea/jarRepositories.xml
+/.idea/jpa-buddy.xml
+/.idea/misc.xml
+/.idea/vcs.xml
