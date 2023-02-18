@@ -2,7 +2,7 @@
 Cette application doit permettre de réaliser des réservations de vol 
 
 # Structure du projet
-La structure du projet respecte le principe hexagonale 
+La structure du projet respecte le principe hexagonal
 
 Pour cela, elle contient trois modules
 * [application](application/application.md): qui peut être un batch, une application du type spring boot et bien d'autres
