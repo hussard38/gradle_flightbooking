@@ -134,3 +134,6 @@ gradle-app.setting
 /.idea/jpa-buddy.xml
 /.idea/misc.xml
 /.idea/vcs.xml
+/.idea/modules/
+/.idea/CoverUsage.xml
+/.idea/modules.xml
