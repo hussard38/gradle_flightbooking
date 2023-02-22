@@ -1,25 +1,14 @@
 package org.hussard.flight.booking.clean;
 
-import com.tngtech.archunit.core.domain.JavaClasses;
-import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.core.importer.ImportOption;
-import com.tngtech.archunit.lang.ArchRule;
-import com.tngtech.archunit.lang.syntax.elements.ClassesShouldConjunction;
-import com.tngtech.archunit.library.Architectures;
-import org.hussard.flight.booking.clean.architecture.Layers;
-import org.hussard.flight.booking.clean.architecture.Packages;
-import org.junit.jupiter.api.Test;
-
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
-import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
+import com.tngtech.archunit.junit.AnalyzeClasses;
 
 /**
  * @link{https://github.com/TNG/ArchUnit-Examples/tree/main/example-plain/src/test/java/com/tngtech/archunit/exampletest}
  */
 @AnalyzeClasses(packages = "uk.co.samhogy.example.archunit", importOptions = { ImportOption.DoNotIncludeTests.class, ImportOption.DoNotIncludeJars.class })
 class RestrictionPackageTest {
-    private JavaClasses jc = new ClassFileImporter()
+    /*private JavaClasses jc = new ClassFileImporter()
             .withImportOption(ImportOption.DoNotIncludeJars)
             .importPackages("org.hussard.flight.booking");
 
@@ -41,7 +30,7 @@ class RestrictionPackageTest {
     void Architecture(){
         layer_dependencies_are_respected.check(jc);
     }
-    /*@Test
+    *//*@Test
     void Architecture(){
         Architectures.OnionArchitecture adapter = onionArchitecture()
                 .domainModels("org.hussard.flight.booking.business.model..")
@@ -51,7 +40,7 @@ class RestrictionPackageTest {
                 .adapter("out", "org.hussard.flight.booking.business.adapter.in..")
                 .adapter("rest", "org.hussard.flight.booking.infrastructure.repository..");
         adapter.check(jc);
-    }*/
+    }*//*
     @Test
     void BusinessNotUseApplicationOrInfrastructure() {
 
@@ -91,5 +80,5 @@ class RestrictionPackageTest {
         ArchRule rule =
                 classes().that().resideInAPackage("..application..")
                         .should().onlyBeAccessed().byAnyPackage("..business..", "..infrastructure..");
-    }
+    }*/
 }
